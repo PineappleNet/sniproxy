@@ -5,7 +5,7 @@ set -e
 export UPSTREAM_DNS="$(echo -n "${UPSTREAM_DNS}" | sed 's/[;]/ /g')"
 
 sed -i "s/UPSTREAM_DNS/${UPSTREAM_DNS}/"    /etc/sniproxy.conf
-sed -i "s/NETFLIX_USA/${NETFLIX_USA}/"    /etc/sniproxy.conf
+#sed -i "s/NETFLIX_USA/${NETFLIX_USA}/"    /etc/sniproxy.conf
 
 
 sniproxy -f -c /etc/sniproxy.conf 
